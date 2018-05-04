@@ -1,24 +1,26 @@
 <template>
-	<div id="app">
-		<h1>Welcome to Hedgehogs!</h1>
-		<center>
-		<h6>Please enter a Ticket to Query</h6>
-		</center>
-		<TodoList/>
-	</div>
+<div id="app">
+<h1>Welcome to Hedgehogs!</h1>
+<center>
+<h6>Please enter a Ticket to Query</h6>
+</center>
+<TodoList/>
+</div>
 </template>
 
 <script>
-import TodoList from "./components/list.vue";
+import TodoList from './components/list.vue';
+
+Vue.component('TodoList', list);
 
 export default {
   components: {
-    TodoList
-  }
+    TodoList,
+  },
 };
 </script>
 
-<style lang="scss">
+<style>
 *,
 *::before,
 *::after {
@@ -29,7 +31,7 @@ export default {
   max-width: 400px;
   margin: 0 auto;
   line-height: 1.4;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #32485f;
